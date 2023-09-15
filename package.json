@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing pageof natours",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/main.scss style.css -watch",
+    "compile": "node-sass sass/main.scss style.comp.css",
+    "concat:css": "concat -o style.concat.css icon-font.css style.comp.css ",
+    "prefix:css": "postcss --use autoprefixer -b 'last 15 versions' style.concat.css -o style.prefix.css",
+    "compress:css": "node-sass style.prefix.css style.css --output-style compressed"
+  },
+  "keywords": [],
+  "author": "lokesh",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^10.1.0"
+  }
+}
